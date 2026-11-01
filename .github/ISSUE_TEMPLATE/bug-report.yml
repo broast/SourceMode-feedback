@@ -1,0 +1,67 @@
+name: Report a SourceMode issue
+description: Tell us what happened while using the SourceMode beta.
+title: "[Issue]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve SourceMode. Please remove private information from text and screenshots.
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: Which website or page were you using with SourceMode?
+      placeholder: https://example.com/article
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: What did you ask?
+      description: Include the prompt or action that led to the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened?
+      description: Describe the response, visual problem, error, or unexpected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did this happen?
+      options:
+        - ChatGPT desktop app
+        - ChatGPT mobile app
+        - ChatGPT in a desktop browser
+        - SourceMode website
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: iPhone / ChatGPT app, or macOS / Chrome
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or additional context
+      description: Drag images here after removing personal or private information.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed personal information, private conversation content, and secrets from this report.
+          required: true
